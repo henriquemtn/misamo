@@ -28,7 +28,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl py-10 px-4 md:px-0">
+    <div className="mx-auto max-w-5xl px-4 py-10 md:px-0">
       <motion.div
         className="mb-10 text-left"
         variants={containerVariants}
@@ -54,9 +54,8 @@ export default function HeroSection() {
 
         <motion.h1
           variants={itemVariants}
-          className="mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl"
+          className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl dark:text-gray-100"
         >
-
           Beautiful UI components
           <br className="hidden sm:block" />
           for your project
@@ -66,7 +65,8 @@ export default function HeroSection() {
           variants={itemVariants}
           className="mb-8 max-w-2xl text-lg text-gray-700 dark:text-gray-300"
         >
-          Free and open source animated components and effects built with React, Typescript, Tailwind CSS, and Motion.
+          Free and open source animated components and effects built with React,
+          Typescript, Tailwind CSS, and Motion.
         </motion.p>
 
         <motion.div
@@ -75,14 +75,14 @@ export default function HeroSection() {
         >
           <Link
             href="/components/marquee"
-            className="flex items-center gap-2 hover:bg-primary-dark rounded-md bg-black dark:bg-white px-6 py-3 text-white dark:text-black transition-colors"
+            className="hover:bg-primary-dark flex items-center gap-2 rounded-md bg-black px-6 py-3 text-white transition-colors dark:bg-white dark:text-black"
           >
             Browse Components
             <ChevronRight size={16} />
           </Link>
           <Link
             href="/templates"
-            className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-gray-800 dark:text-white transition-colors hover:bg-gray-100"
+            className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-gray-800 transition-colors hover:bg-gray-100 dark:text-white"
           >
             Browse Templates <ChevronRight size={16} />
           </Link>

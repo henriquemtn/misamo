@@ -1,7 +1,7 @@
 export interface ComponentCategory {
   slug: string
   name: string
-  components: { name: string, isNew?: boolean }[]
+  components: { name: string; isNew?: boolean }[]
   isNew?: boolean
 }
 

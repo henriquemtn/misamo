@@ -16,7 +16,6 @@ import {
 const links = [
   { text: "Components", href: "/components/marquee" },
   { text: "Templates", href: "/templates", comingSoon: true },
-
 ]
 
 export default function Header() {

@@ -4,14 +4,11 @@ import { notFound } from "next/navigation"
 import { categories, getCategory } from "@/config/components"
 import { getComponentsByNames } from "@/lib/utils"
 import ComponentCard from "@/components/component-card"
-import ComponentDetails from "@/components/component-details"
 import ComponentLoader from "@/components/component-loader-server"
-import Cta from "@/components/cta"
-import PageGrid from "@/components/page-grid"
 import PageHeader from "@/components/page-header"
 
 type Props = {
-  params: { category: string; component: string }
+  params: Promise<{ category: string; component: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -25,14 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     category.components.map((item) => item.name)
   )
 
-  const component = components.find(comp => comp.name === componentName)
+  const component = components.find((comp) => comp.name === componentName)
   if (!component) return {}
 
   // Custom title and description for event-calendar
   if (category.slug === "event-calendar") {
     return {
-      title: "Event calendar component built with React and Tailwind CSS - Origin UI",
-      description: "An event calendar component built with React and Tailwind CSS. Originally built in v0 and currently in early alpha stage.",
+      title:
+        "Event calendar component built with React and Tailwind CSS - Origin UI",
+      description:
+        "An event calendar component built with React and Tailwind CSS. Originally built in v0 and currently in early alpha stage.",
     }
   }
 
@@ -69,7 +68,7 @@ export default async function Page({ params }: Props) {
     category.components.map((item) => item.name)
   )
 
-  const component = components.find(comp => comp.name === componentName)
+  const component = components.find((comp) => comp.name === componentName)
   if (!component) notFound()
 
   // Determine description based on component/category
@@ -101,7 +100,10 @@ export default async function Page({ params }: Props) {
         title={component.name}
         breadcrumbs={[
           { label: category.name, href: `#` },
-          { label: component.name, href: `/${category.slug}/${component.name}` },
+          {
+            label: component.name,
+            href: `/${category.slug}/${component.name}`,
+          },
         ]}
       >
         {getDescriptionText()}

@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+
 import { cn } from "@/registry/default/lib/utils"
 
 interface BreadcrumbItem {
@@ -21,9 +22,9 @@ export default function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <div className={cn("flex flex-col text-start mb-16", className)}>
+    <div className={cn("mb-16 flex flex-col text-start", className)}>
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
+        <div className="text-muted-foreground mb-4 flex items-center space-x-1 text-sm">
           {breadcrumbs.map((item, index) => (
             <React.Fragment key={item.href}>
               {index > 0 && (
@@ -44,9 +45,14 @@ export default function PageHeader({
                 </svg>
               )}
               {index === breadcrumbs.length - 1 ? (
-                <div className="font-medium text-foreground">{item.label.charAt(0).toUpperCase() + item.label.slice(1)}</div>
+                <div className="text-foreground font-medium">
+                  {item.label.charAt(0).toUpperCase() + item.label.slice(1)}
+                </div>
               ) : (
-                <Link href={item.href} className="truncate hover:text-foreground">
+                <Link
+                  href={item.href}
+                  className="hover:text-foreground truncate"
+                >
                   {item.label}
                 </Link>
               )}
@@ -57,9 +63,7 @@ export default function PageHeader({
       <h1 className="font-heading text-foreground mb-3 text-4xl/[1.1] font-bold tracking-tight md:text-5xl/[1.1]">
         {title.charAt(0).toUpperCase() + title.slice(1)}
       </h1>
-      <p className="text-muted-foreground max-w-3xl text-lg">
-        {children}
-      </p>
+      <p className="text-muted-foreground max-w-3xl text-lg">{children}</p>
     </div>
   )
 }

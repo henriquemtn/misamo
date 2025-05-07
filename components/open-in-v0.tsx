@@ -21,7 +21,7 @@ const OpenInV0 = ({ componentSource }: { componentSource: string }) => {
               buttonVariants({
                 variant: "ghost",
               }),
-              "text-white hover:text-gray-200 text-xs dark:text-black bg-primary transition-none hover:bg-accent-foreground"
+              "bg-primary hover:bg-accent-foreground text-xs text-white transition-none hover:text-gray-200 dark:text-black"
             )}
             href={`https://v0.dev/chat/api/open?url=${encodeURIComponent(componentSource)}`}
             target="_blank"

@@ -1,13 +1,13 @@
 "use client"
 
-import React, { useEffect, useState, JSX } from "react"
-import { TabsContent } from "@/registry/default/ui/tabs"
-import type { RegistryItem } from "shadcn/registry"
+import React, { JSX, useEffect, useState } from "react"
 import { LoaderCircleIcon } from "lucide-react"
+import type { RegistryItem } from "shadcn/registry"
 
 import { convertRegistryPaths } from "@/lib/utils"
 import CodeBlock, { highlight } from "@/components/code-block"
 import CopyButton from "@/components/copy-button"
+import { TabsContent } from "@/registry/default/ui/tabs"
 
 interface ComponentCodeTabProps {
   component: RegistryItem
@@ -16,7 +16,9 @@ interface ComponentCodeTabProps {
 export default function ComponentCodeTab({ component }: ComponentCodeTabProps) {
   const [code, setCode] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(null)
+  const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(
+    null
+  )
 
   useEffect(() => {
     const handleEmptyCode = () => {
@@ -59,10 +61,13 @@ export default function ComponentCodeTab({ component }: ComponentCodeTabProps) {
 
   return (
     <TabsContent value="code" className="mt-0 border-0 p-0">
-      <div className="relative border rounded-md">
+      <div className="relative rounded-md border">
         {isLoading ? (
-          <div className="flex justify-center items-center min-h-[200px]">
-            <LoaderCircleIcon className="animate-spin text-muted-foreground" size={24} />
+          <div className="flex min-h-[200px] items-center justify-center">
+            <LoaderCircleIcon
+              className="text-muted-foreground animate-spin"
+              size={24}
+            />
           </div>
         ) : code === "" ? (
           <p className="text-muted-foreground text-sm">
@@ -74,7 +79,8 @@ export default function ComponentCodeTab({ component }: ComponentCodeTabProps) {
               className="text-foreground font-medium underline hover:no-underline"
             >
               open an issue
-            </a>.
+            </a>
+            .
           </p>
         ) : (
           <div className="relative">
