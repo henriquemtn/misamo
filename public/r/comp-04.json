@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comp-04",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://originui.com/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/comp-04.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\"\n\nexport default function Component() {\n  return <Badge className=\"min-w-5 px-1\">6</Badge>\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "badge"
+    ]
+  }
+}

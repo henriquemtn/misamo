@@ -7,14 +7,9 @@ export interface ComponentCategory {
 
 export const categories: ComponentCategory[] = [
   {
-    slug: "button",
-    name: "Button",
-    components: [{ name: "comp-02" }],
-  },
-  {
-    slug: "input",
-    name: "Input",
-    components: [{name: "comp-01"}]
+    slug: "components",
+    name: "Components",
+    components: [{ name: "marquee" }],
   },
 ]
 

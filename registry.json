@@ -530,7 +530,7 @@
       ]
     },
     {
-      "name": "comp-01",
+      "name": "marquee",
       "type": "registry:component",
       "registryDependencies": [
         "https://originui.com/r/input.json",
@@ -538,28 +538,12 @@
       ],
       "files": [
         {
-          "path": "registry/default/components/comp-01.tsx",
+          "path": "registry/default/components/marquee.tsx",
           "type": "registry:component"
         }
       ],
       "meta": {
         "tags": ["input", "label"]
-      }
-    },
-    {
-      "name": "comp-02",
-      "type": "registry:component",
-      "registryDependencies": [
-        "https://originui.com/r/button.json"
-      ],
-      "files": [
-        {
-          "path": "registry/default/components/comp-02.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["button"]
       }
     }
   ]

@@ -23,7 +23,7 @@ export default function Header() {
   const isMobile = useIsMobile()
 
   return (
-    <header className="before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] relative mb-14 before:absolute before:-inset-x-32 before:bottom-0 before:h-px">
+    <header className="before:bg-[linear-gradient(to_right,--theme(--color-border/.3),--theme(--color-border)_200px,--theme(--color-border)_calc(100%-200px),--theme(--color-border/.3))] relative before:absolute before:-inset-x-32 before:bottom-0 before:h-px">
       <div className="mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between gap-3">
         <div className="flex items-center gap-3 md:gap-10">
           <Link className="shrink-0" href="/" aria-label="Home">
