@@ -51,13 +51,13 @@ export default function HeaderLink({
             {text}
           </Link>
           {isNew && (
-            <div className="inline-flex h-5 items-center text-[11px] font-semibold text-purple-700 bg-purple-100 py-0.5 px-1 rounded-sm -ml-0.5">
+            <div className="inline-flex h-5 bg-[#FFBD7A] items-center text-[11px] font-semibold py-0.5 px-1 rounded-full -ml-0.5">
               Novidade!
             </div>
           )}
           {comingSoon && (
-            <div className="inline-flex h-5 ml-0.5 items-center text-[11px] font-semibold text-purple-700 bg-purple-100 py-0.5 px-1 rounded-sm">
-              Coming Soon!
+            <div className="inline-flex h-5 ml-0.5 bg-[#FFBD7A] items-center text-[11px] font-semibold py-0.5 px-2 rounded-full">
+              Coming Soon
             </div>
           )}
         </>
