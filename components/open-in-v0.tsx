@@ -20,14 +20,14 @@ const OpenInV0 = ({ componentSource }: { componentSource: string }) => {
             className={cn(
               buttonVariants({
                 variant: "ghost",
-                size: "icon",
               }),
-              "text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+              "text-white hover:text-gray-200 text-xs dark:text-black bg-primary transition-none hover:bg-accent-foreground"
             )}
             href={`https://v0.dev/chat/api/open?url=${encodeURIComponent(componentSource)}`}
             target="_blank"
             aria-label="Open in v0"
           >
+            Open in
             <svg
               height="16"
               xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from "lucide-react"
 import * as motion from "motion/react-client"
 
 import Frameworks from "./frameworks"
@@ -28,7 +28,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-4 md:px-0">
+    <div className="mx-auto max-w-5xl py-10 px-4 md:px-0">
       <motion.div
         className="mb-10 text-left"
         variants={containerVariants}
@@ -42,7 +42,7 @@ export default function HeroSection() {
         >
           <div className="mr-2 border-r border-gray-200 py-1 pr-2">👨🏻‍💻</div>
           <span className="py-1">
-            Feito por
+            Made by
             <Link
               href="https://www.henriquesilveira.tech"
               className="ml-1 underline transition-colors"
@@ -56,16 +56,17 @@ export default function HeroSection() {
           variants={itemVariants}
           className="mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl"
         >
-          Economize tempo e dinheiro <br className="hidden sm:block" />
-          montando o seu produto
+
+          Beautiful UI components
+          <br className="hidden sm:block" />
+          for your project
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="mb-8 max-w-2xl text-lg text-gray-700 dark:text-gray-300" 
+          className="mb-8 max-w-2xl text-lg text-gray-700 dark:text-gray-300"
         >
-          Componentes e efeitos animados gratuitos e de código aberto, criados
-          com React, Typescript, Tailwind CSS e Motion.
+          Free and open source animated components and effects built with React, Typescript, Tailwind CSS, and Motion.
         </motion.p>
 
         <motion.div
@@ -73,22 +74,23 @@ export default function HeroSection() {
           className="mb-12 flex flex-col justify-start gap-4 sm:flex-row"
         >
           <Link
-            href="/components"
-            className="hover:bg-primary-dark rounded-md bg-black dark:bg-white px-6 py-3 text-white dark:text-black transition-colors"
+            href="/components/marquee"
+            className="flex items-center gap-2 hover:bg-primary-dark rounded-md bg-black dark:bg-white px-6 py-3 text-white dark:text-black transition-colors"
           >
-            Todos os Componentes
+            Browse Components
+            <ChevronRight size={16} />
           </Link>
           <Link
             href="/templates"
             className="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-gray-800 dark:text-white transition-colors hover:bg-gray-100"
           >
-            Ver Templates <ArrowRight size={16} />
+            Browse Templates <ChevronRight size={16} />
           </Link>
         </motion.div>
 
         <motion.div variants={itemVariants}>
           <p className="mb-6 text-sm text-gray-500">
-            Todos os componentes utilizam:
+            All components built with:
           </p>
           <Frameworks />
         </motion.div>

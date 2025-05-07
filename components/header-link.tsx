@@ -57,7 +57,7 @@ export default function HeaderLink({
           )}
           {comingSoon && (
             <div className="inline-flex h-5 ml-0.5 items-center text-[11px] font-semibold text-purple-700 bg-purple-100 py-0.5 px-1 rounded-sm">
-              Em breve!
+              Coming Soon!
             </div>
           )}
         </>

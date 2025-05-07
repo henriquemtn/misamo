@@ -14,7 +14,7 @@ import {
 } from "@/registry/default/ui/dropdown-menu"
 
 const links = [
-  { text: "Components", href: "/components" },
+  { text: "Components", href: "/components/marquee" },
   { text: "Templates", href: "/templates", comingSoon: true },
 
 ]

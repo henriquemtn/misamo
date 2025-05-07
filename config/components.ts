@@ -1,7 +1,7 @@
 export interface ComponentCategory {
   slug: string
   name: string
-  components: { name: string }[]
+  components: { name: string, isNew?: boolean }[]
   isNew?: boolean
 }
 
@@ -9,7 +9,7 @@ export const categories: ComponentCategory[] = [
   {
     slug: "components",
     name: "Components",
-    components: [{ name: "marquee" }],
+    components: [{ name: "marquee", isNew: true }],
   },
 ]
 

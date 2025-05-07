@@ -85,7 +85,7 @@ export default function ComponentDetails({
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+                    className="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100"
                   >
                     <CodeIcon size={16} aria-hidden={true} />
                   </Button>

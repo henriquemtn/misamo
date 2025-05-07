@@ -59,11 +59,7 @@ export default function Page({ params }: Props) {
             href={`/components/${category.slug}/${component.name}`}
             className="transition-transform hover:scale-[1.02]"
           >
-            <ComponentCard 
-              component={component}
-              className="h-full" 
-              children={undefined}    
-            />
+           
           </Link>
         ))}
       </PageGrid>

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const components = getComponentsByNames(
     category.components.map((item) => item.name)
   )
-  
+
   const component = components.find(comp => comp.name === componentName)
   if (!component) return {}
 
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const params = []
-  
+
   // Generate params for each component in each category
   for (const category of categories) {
     for (const component of category.components) {
@@ -54,7 +54,7 @@ export async function generateStaticParams() {
       })
     }
   }
-  
+
   return params
 }
 
@@ -68,7 +68,7 @@ export default async function Page({ params }: Props) {
   const components = getComponentsByNames(
     category.components.map((item) => item.name)
   )
-  
+
   const component = components.find(comp => comp.name === componentName)
   if (!component) notFound()
 
@@ -96,15 +96,20 @@ export default async function Page({ params }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-6">
-      <PageHeader title={component.name}>{getDescriptionText()}</PageHeader>
-      <PageGrid>
-        <ComponentCard component={component}>
-          <ComponentLoader component={component} />
-          <ComponentDetails component={component} />
-        </ComponentCard>
-      </PageGrid>
-      <Cta />
+    <div className="flex flex-col gap-6 py-9">
+      <PageHeader
+        title={component.name}
+        breadcrumbs={[
+          { label: category.name, href: `#` },
+          { label: component.name, href: `/${category.slug}/${component.name}` },
+        ]}
+      >
+        {getDescriptionText()}
+      </PageHeader>
+      <ComponentCard
+        component={component}
+        previewContent={<ComponentLoader component={component} />}
+      />
     </div>
   )
 }
