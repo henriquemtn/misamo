@@ -51,13 +51,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           <div className="overflow-hidden px-4 supports-[overflow:clip]:overflow-clip sm:px-6">
-            <div className="relative mx-auto flex min-h-screen max-w-5xl flex-col">
-              <Header />
+            <div className="relative mx-auto flex min-h-screen max-w-screen-xl px-4 flex-col">
               <main className="grow">{children}</main>
-              <Footer />
             </div>
           </div>
+          <Footer />
           <Toaster />
           <Sonner />
         </ThemeProvider>

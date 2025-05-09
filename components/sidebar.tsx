@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 
 import { categories } from "@/config/components"
 import { cn } from "@/registry/default/lib/utils"
+import { formatComponentName } from "@/lib/helpers"
 
 export default function Sidebar() {
   const pathname = usePathname()
@@ -48,8 +49,7 @@ export default function Sidebar() {
                         )}
                       >
                         <span className="relative shrink-0">
-                          {component.name.charAt(0).toUpperCase() +
-                            component.name.slice(1)}
+                          {formatComponentName(component.name)}
                         </span>
                         {component.isNew && (
                           <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline">

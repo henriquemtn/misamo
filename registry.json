@@ -165,18 +165,7 @@
           "type": "registry:ui"
         }
       ]
-    },
-    {
-      "name": "cropper",
-      "type": "registry:ui",
-      "dependencies": ["@origin-space/image-cropper"],
-      "files": [
-        {
-          "path": "registry/default/ui/cropper.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },    
+    },  
     {
       "name": "datefield-rac",
       "type": "registry:ui",
@@ -544,6 +533,22 @@
       ],
       "meta": {
         "tags": ["input", "label"]
+      }
+    },
+    {
+      "name": "recent-products",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://originui.com/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/components/recent-products.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["product", "ecommerce"]
       }
     }
   ]

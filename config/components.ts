@@ -11,6 +11,11 @@ export const categories: ComponentCategory[] = [
     name: "Components",
     components: [{ name: "marquee", isNew: true }],
   },
+  {
+    slug: "ecommerce",
+    name: "Ecommerce",
+    components: [{ name: "recent-products", isNew: true}],
+  }
 ]
 
 export function getCategory(slug: string): ComponentCategory | undefined {

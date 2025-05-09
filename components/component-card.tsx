@@ -9,7 +9,6 @@ import ComponentTabs from "@/components/component-tabs"
 import { cn } from "@/registry/default/lib/utils"
 import { TabsContent } from "@/registry/default/ui/tabs"
 
-import ComponentLoader from "./component-loader-server"
 import OpenInV0 from "./open-in-v0"
 import { Button } from "./ui/button"
 
