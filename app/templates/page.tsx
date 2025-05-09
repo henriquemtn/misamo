@@ -79,9 +79,8 @@ const cards = [
 export default function Page() {
   return (
     <>
-      <PageHeader title="Layouts &amp; Experiments">
-        Beautifully designed open-source layouts and UI experiments built with
-        Origin UI and shadcn/ui.
+      <PageHeader title="Templates">
+        Coming soon
       </PageHeader>
 
       {/* Cards */}

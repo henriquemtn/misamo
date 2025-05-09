@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { RiGithubFill, RiMenu2Line, RiTwitterXFill } from "@remixicon/react"
+import { RiGithubFill, RiMenu2Line } from "@remixicon/react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import HeaderLink from "@/components/header-link"
@@ -12,8 +12,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/registry/default/ui/dropdown-menu"
+import Image from "next/image"
+import Logo from "./logo"
 
 const links = [
+  { text: "Blog", href: "/blog" },
   { text: "Components", href: "/components/marquee" },
   { text: "Templates", href: "/templates", comingSoon: true },
 ]
@@ -25,11 +28,10 @@ export default function Header() {
     <header className="supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full backdrop-blur-lg">
       <div className="mx-auto flex h-[72px] w-full max-w-screen-xl px-4 items-center justify-between gap-3">
         <div className="flex items-center gap-3 md:gap-10">
-          <Link className="shrink-0" href="/" aria-label="Home">
-            <span className="sr-only">Misamo UI</span>
-            <h1 className="text-xl font-bold">Misamo</h1>
-          </Link>
+          <Logo />
+        </div>
 
+        <div className="flex items-center">
           <div className="flex items-center gap-4 md:gap-10">
             {links.map((link) => (
               <HeaderLink
@@ -40,8 +42,6 @@ export default function Header() {
               />
             ))}
           </div>
-        </div>
-        <div className="flex items-center">
           {!isMobile && (
             <>
               <div

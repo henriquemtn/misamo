@@ -28,7 +28,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10 md:px-0">
+    <div className="mx-auto max-w-7xl px-4 py-10 md:px-0">
       <motion.div
         className="mb-10 text-left"
         variants={containerVariants}
